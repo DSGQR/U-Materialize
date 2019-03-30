@@ -124,27 +124,38 @@
 
     <!-- START HERE -->
 
-    <!-- FEATURE DISCOVERY -->
-    <a>Open Tap Target</a>
-    <a>Close Tap Target</a>
+    <!-- FROM MATERIALIZE - DIDNT WORK -->
+    <!-- <a id="menu" class="waves-effect waves-light btn btn-floating"><i class="material-icons">menu</i></a> -->
+    <!-- Tap Target Structure -->
+    <!-- <div class="tap-target" data-target="menu">
+      <div class="tap-target-content">
+        <h5>Title</h5>
+        <p>A bunch of text</p>
+      </div>
+    </div> -->
 
-    <div>
-      <a>
-        <i></i>
+    <!-- FEATURE DISCOVERY -->
+    <!-- <a class="waves-effect waves-light btn" onclick="$('.tap-target').tapTarget('open')">Open Tap Target</a> -->
+    <!-- <a class="waves-effect waves-light btn" onclick="$('.tap-target').tapTarget('close')">Close Tap Target</a> -->
+
+    <div class="fixed-action-btn" onclick="$('.tap-target').tapTarget('open')">
+      <a id="menu" class="btn btn-floating btn-large cyan">
+        <i class="material-icons">menu</i>
       </a>
     </div>
 
-    <div>
-      <div>
-        <div>
+    <div class="tap-target-wrapper">
+      <div class="tap-target cyan" data-activates="menu">
+        <div class="tap-target-content white-text">
           <h5>Hello World</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi provident cupiditate dolores. Impedit cum asperiores
+          <p class="white-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi provident cupiditate dolores. Impedit cum
+            asperiores
             a aspernatur ullam esse id!</p>
         </div>
       </div>
-      <div>
-        <a>
-          <i></i>
+      <div class="tap-target-wave">
+        <a class="btn btn-floating btn-large cyan tap-target-origin">
+          <i class="material-icons">close</i>
         </a>
       </div>
     </div>
@@ -173,6 +184,7 @@
 
       // JAVASCRIPT START HERE //
 
+      // $('.tap-target').tapTarget(); FROM MATERIALIZE - DIDNT WORK
 
 
 
