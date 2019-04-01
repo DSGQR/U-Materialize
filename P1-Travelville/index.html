@@ -15,7 +15,7 @@
    <title>Custom Materialize Theme</title>
  </head>
 
- <body>
+ <body id="home" class="scrollspy">
    <div class="navbar-fixed">
      <nav class="teal">
        <div class="container">
@@ -78,7 +78,7 @@
    </section>
 
    <!-- Section: Search -->
-   <section class="section section-search teal darken-1 white-text center">
+   <section id="search" class="section section-search teal darken-1 white-text center scrollspy">
      <div class="container">
        <div class="row">
          <div class="col s12">
@@ -122,7 +122,7 @@
    </section>
 
    <!-- Section: Popular -->
-   <section class="section section-popular">
+   <section id="popular" class="section section-popular scrollspy">
      <div class="container">
        <div class="row">
          <h4 class="center"><span class="teal-text">Popular</span> Places</h4>
@@ -198,7 +198,7 @@
    </section>
 
    <!-- Section: Gallery -->
-   <section class="section section-gallery">
+   <section id="gallery" class="section section-gallery scrollspy">
      <div class="container">
        <h4 class="center">
          <span class="teal-text">Photo</span> Gallery
@@ -260,10 +260,10 @@
    </section>
 
    <!-- Section: Contact -->
-   <section class="section section-contact">
+   <section id="contact" class="section section-contact scrollspy">
      <div class="container">
        <div class="row">
-         <div class="col s12 m6">
+         <div class="col s12 m8 offset-m2 l6">
            <div class="card-panel teal white-text center">
              <i class="material-icons medium">email</i>
              <h5>Contact Us For Booking</h5>
@@ -279,7 +279,7 @@
              <li class="collection-item">Miami FL, 33125</li>
            </ul>
          </div>
-         <div class="col s12 m6">
+         <div class="col s12 m8 offset-m2 l6">
             <div class="card-panel grey lighten-3">
               <h5>Please fill out this form</h5>
               <div class="input-field">
@@ -298,12 +298,17 @@
                 <textarea class="materialize-textarea" placeholder="Enter Message" id="message"></textarea> 
                 <label for="message">Message</label>
               </div>
-              <input type="submit" value="submit" class="btn">
+              <input type="submit" value="submit" class="btn waves-effect waves-light">
             </div>
          </div>
        </div>
      </div>
    </section>
+
+   <!-- Footer -->
+   <footer class="section teal darken-2 white-text center">
+     <p class="flow-text">Travelville &copy; 2019</p>
+   </footer>
 
    <!--Import jQuery before materialize.js-->
    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -337,7 +342,8 @@
          }
        })
 
-       // 
+       // Init Scrollspy
+       $('.scrollspy').scrollSpy()
 
      });
    </script>
