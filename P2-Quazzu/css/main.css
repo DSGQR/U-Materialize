@@ -90,3 +90,12 @@
 .tabs .indicator {
   background-color: #6a1b9a;
 }
+
+/* -------------------------------- */
+/* signup.html */
+/* -------------------------------- */
+
+.btn-extend {
+  display: block;
+  width: 100%;
+}
