@@ -23,8 +23,8 @@
         </a>
         <ul class="right hide-on-med-and-down">
           <li><a href="index.html">Dashboard</a></li>
-          <li class="active"><a href="posts.html">Posts</a></li>
-          <li><a href="categories.html">Categories</a></li>
+          <li><a href="posts.html">Posts</a></li>
+          <li class="active"><a href="categories.html">Categories</a></li>
           <li><a href="comments.html">Comments</a></li>
           <li><a href="users.html">Users</a></li>
         </ul>
@@ -48,7 +48,7 @@
           </li>
           <li><a href="index.html"><i class="material-icons">dashboard</i>Dashboard</a></li>
           <li><a href="posts.html">Posts</a></li>
-          <li><a href="categories.html">Categories</a></li>
+          <li class="active"><a href="categories.html">Categories</a></li>
           <li><a href="comments.html">Comments</a></li>
           <li><a href="users.html">Users</a></li>
           <li>
@@ -72,18 +72,16 @@
         <div class="col s12">
           <div class="card">
             <div class="card-content">
-              <span class="card-title">Posts</span>
+              <span class="card-title">Categories</span>
               <table class="striped">
                 <thead>
                   <tr>
                     <th>Title</th>
-                    <th>Category</th>
                     <th>Date Created</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Post One</td>
                     <td>Web Development</td>
                     <td>Jan 1, 2019</td>
                     <td>
@@ -91,7 +89,6 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>Post Two</td>
                     <td>Graphic Design</td>
                     <td>Jan 2, 2019</td>
                     <td>
@@ -99,33 +96,15 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>Post Three</td>
-                    <td>Web Development</td>
+                    <td>Tech Gadgets</td>
                     <td>Jan 3, 2019</td>
                     <td>
                       <a href="details.html" class="btn blue lighten-2">Details</a>
                     </td>
                   </tr>
                   <tr>
-                    <td>Post Four</td>
-                    <td>Tech Gadgets</td>
+                    <td>Other</td>
                     <td>Jan 5, 2019</td>
-                    <td>
-                      <a href="details.html" class="btn blue lighten-2">Details</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Post Five</td>
-                    <td>Graphic Design</td>
-                    <td>Jan 6, 2019</td>
-                    <td>
-                      <a href="details.html" class="btn blue lighten-2">Details</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Post Six</td>
-                    <td>Web Development</td>
-                    <td>Jan 7, 2019</td>
                     <td>
                       <a href="details.html" class="btn blue lighten-2">Details</a>
                     </td>
@@ -185,50 +164,19 @@
 
   <!-- Fixed Action Button -->
   <div class="fixed-action-btn">
-    <a class="btn-floating btn-large red">
+    <a href="#category-modal" class="modal-trigger btn-floating btn-large red">
       <i class="material-icons">add</i>
     </a>
-    <ul>
-      <li>
-        <a href="#post-modal" class="modal-trigger btn-floating blue">
-          <i class="material-icons">mode_edit</i>
-        </a>
-      </li>
-      <li>
-        <a href="#catergory-modal" class="modal-trigger btn-floating blue">
-          <i class="material-icons">folder</i>
-        </a>
-      </li>
-      <li>
-        <a href="#user-modal" class="modal-trigger btn-floating blue">
-          <i class="material-icons">supervisor_account</i>
-        </a>
-      </li>
-    </ul>
   </div>
 
-  <!-- Add Post Modal -->
-  <div id="post-modal" class="modal">
+  <!-- Add Category Modal -->
+  <div id="category-modal" class="modal">
     <div class="modal-content">
-      <h4>Add Post</h4>
+      <h4>Add Category</h4>
       <form>
         <div class="input-field">
           <input type="text" id="title">
           <label for="title">Title</label>
-        </div>
-        <div class="input-field">
-          <select>
-            <option value="" disbaled selected>Select Option</option>
-            <option value="1">Web Development</option>
-            <option value="2">Graphic Design</option>
-            <option value="3">Tech Gadgets</option>
-            <option value="4">Other</option>
-          </select>
-          <label>Category</label>
-        </div>
-        <div class="input-field">
-          <textarea name="body" id="body" class="materialize-textarea"></textarea>
-          <label for="body"></label>
         </div>
       </form>
       <div class="modal-footer">
@@ -255,7 +203,6 @@
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script src="https://cdn.ckeditor.com/4.11.3/standard/ckeditor.js"></script>
   <script>
     //  Hide Sections
     $('.section').hide()
@@ -273,9 +220,6 @@
 
         // Init Modal
         $('.modal').modal()
-
-        //  Init Select
-        $('select').material_select()
 
       })
     }, 1000)
